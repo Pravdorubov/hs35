@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linter": "flake8",
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+}
+}

@@ -1,0 +1,1 @@
+c:\Projects\hs35\.venv\Scripts\activate.bat
