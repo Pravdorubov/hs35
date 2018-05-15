@@ -1,43 +1,28 @@
 from django.db import models
 
-class STATE:
+class STATUS:
     PUPIL = 'PUPIL'
     TEACHER = 'PUPIL'
     PARENT = 'PARENT'
 
 
-STATE_CHOICES = (
-    (STATE.PUPIL, 'Ученик', 'Ankete'),
-    (STATE.TEACHER, 'Учитель', 'Ankete'),
-    (STATE.PARENT, 'Родитель', 'Ankete'),
+STATUS_CHOICES = (
+    (STATUS.PUPIL, 'Ученик', 'Ankete'),
+    (STATUS.TEACHER, 'Учитель', 'Ankete'),
+    (STATUS.PARENT, 'Родитель', 'Ankete'),
 )
 
 class Ankete(models.Model):
     '''
     Анкета
     '''
-    external_id = models.CharField('внешний ИД', db_index=True, max_length=7, null=True, blank=True)
-    subject_rf = models.CharField('Субъект РФ', max_length=50, null=True, blank=True)
-    name_full = models.CharField('Полное наименование', max_length=500, default='')
-    name_short = models.CharField('Краткое наименование', max_length=500, null=True, blank=True)
-    name_employee = models.CharField('ФИО руководителя', max_length=200, null=True, blank=True)
-    inn = models.CharField('ИНН', max_length=15, null=True, blank=True)
-    orn = models.CharField('ОГРН', max_length=15, null=True, blank=True)
-    legal_address = models.CharField('Юридический адрес', max_length=500, null=True, blank=True)
-    actual_address = models.CharField('Фактический адрес', max_length=500, null=True, blank=True)
-    phone = models.CharField('Телефон', max_length=100, null=True, blank=True)
-    email = models.EmailField('Электронная почта', max_length=256, null=True, blank=True)
-    more_emails = models.CharField('Дополнительные адреса электронной почты', max_length=256, default='', blank=True)
-    site =models.CharField('Сайт', max_length=200, null=True, blank=True)
-    count_mkd = models.IntegerField('Количество домов', null=True, blank=True)
-    area_total = models.FloatField('Обслуживаемая площадь', null=True, blank=True)
-    w_summ = models.FloatField('Рейтинг', null=True, blank=True)
-    is_oagv = models.BooleanField('Структурное подразделение ОАГВ', default=False)
+    status = models.CharField('Статус', max_length=6, choices=SOURCE_CHOICES, default=STATUS.PUPIL)
+    name = models.CharField('Имя')
 
     def __str__(self):
         if self.name_short:
             return self.name_short
-        return self.name_full
+        return self.name_full       
 
     class Meta:
         verbose_name = 'Исполнитель'
