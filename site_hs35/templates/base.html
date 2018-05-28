@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Человек разумный</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "/mdb/css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static "/mdb/css/mdb.min.css" %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static "/mdb/css/style.css" %}" rel="stylesheet">
+    {% block extrahead %} {% endblock %}
+</head>
+<body>
+    {% block navbar %}
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <div class="container">
+  
+        <!-- Brand -->
+        <a class="navbar-brand" href="#" target="_blank">
+         <strong>Человек разумный</strong>
+        </a>
+  
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">О нас
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pupils">Для учеников</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#parents">Для родителей</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#teachers">Для учителей</a>
+            </li>
+          </ul>
+  
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <!-- <li class="nav-item">
+              <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a href="dashboard/" class="nav-link border border-light rounded"
+                target="_blank">
+                <i class="fa fa-user mr-2"></i>Войти
+              </a>
+            </li> -->
+          </ul>
+  
+        </div>
+  
+      </div>
+    </nav>
+    <!-- Navbar -->
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

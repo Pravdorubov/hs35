@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
 <html lang="en">
 
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+  {% block navbar %}
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
@@ -80,6 +80,8 @@
     </div>
   </nav>
   <!-- Navbar -->
+  {% enblock %}
+  {% block content %}
   <div style="position:absolute; width:50%; left:50%; margin-left:-25%; top:25%; margin-top:-25px; z-index: 1000;" class="alert alert-info alert-dismissible fade" role="alert">
       <i class="fa fa-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Подать заявку будет можно с 1 июня 2018 года
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -549,323 +551,14 @@
 <!--Section: reports-->
 <section>
   
-    <!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-        <!--First slide-->
-        <div class="carousel-item active">
-            
-
-        <!-- Card deck -->
-        <div class="card-deck" style="margin: 0;">
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/yablokova.png' %}" alt="Card image cap">
-              
-                <div class="mask rgba-white-slight"></div>
-              
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Яблокова Саша: выпуск прикладной 2015 года</h4>
-              <!--Text-->
-              <p class="card-text">Галина Николаевна преподавала нам математический и комплексный анализ. Несмотря на немаленькие д/з, решать их было интересно и увлекательно. Хотелось сделать больше и посложнее. Сказать, что Г.Н. любит комплексный анализ - сказать ничего. Я думаю именно эта любовь к предмету так и стимулировала нас погружаться ещё глубже и глубже в недры столь непростых дисциплин. Опыт обучения и такого педагога очень ценен для меня, ведь ты непросто учишься, но и воспитываешь в себе такое требовательное отношение не только к знаниям, и к любому новому делу. :)</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/anisimova.jpg' %}" alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Анастасия Анисимова</h4>
-              <!--Text-->
-              <p class="card-text">Я не переставала восхищаться уроками Анастасии Леонидовны на протяжении всего обучения. Ни на одном занятии я не получала столько положительных эмоций. Материал был настолько хорошо преподнесен, что тебе оставалось просто подойти к доске и решить задачу. Время на занятии пролетало незаметно, т.к. голова постоянно была занята решением интересных задач. Я бы рекомендовала Анастасию Леонидовну как специалиста высокого уровня, с умением преподнести материал максимально доступно и легко.
-              </p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/petrova.png' %}" alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Юлия Петрова</h4>
-              <!--Text-->
-              <p class="card-text">С математикой у меня всегда были непростые отношения. Маму вызывали регулярно в школу из-за плохих оценок по предмету, говорили, что не сдам экзамен после 9 класса, потом говорили, что завалю ЕГЭ и никуда не поступлю. А сейчас я заканчиваю Московский ВУЗ с красным дипломом. Ничего бы этого не было, если бы не Ирина Александровна, которая верила в наш общий успех больше меня. Педагог никогда не сдаётся, готова объяснять тему столько раз, сколько нужно, 5,10 или 15 раз, лишь бы было полное понимание. Она точно понимает, как нужно работать с учениками и как достичь максимального успеха, основываясь на способностях каждого отдельного ученика. Спасибо большое!
-              </p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-        </div>
-        <!-- Card deck -->
-
-            
-        </div>
-        <!--/First slide-->
-        <!--Second slide-->
-        <div class="carousel-item">
-                    <!-- Card deck -->
-        <div class="card-deck" style="margin: 0;">
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/tatuzova.png' %}" alt="Card image cap">
-              
-                <div class="mask rgba-white-slight"></div>
-              
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Оля Татузова (выпуск 2003 года)</h4>
-              <!--Text-->
-              <p class="card-text">Джумаева Ольга Евгеньевна.
-
-                  Преподавала для нашего класса математику: 10-11 класс.
-                  
-                  Ольга Евгеньевна позволила достаточно в короткий срок поднять на высокий уровень знания по данному предмету. 
-                  Отличительной чертой является системность и фундаментальность знаний,которые излагались в доступной форме.
-                  Благодаря Ольге Евгеньевне вступительные экзамены по математике были сданы на максимальные баллы.
-                  Человеческие качества педагога безусловно давали дополнительный стимул в изучении материала.
-                  
-                  Огромное спасибо за всё.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/goryanskaya.png' %}" alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Горянская Екатерина</h4>
-              <!--Text-->
-              <p class="card-text">Ирина Александровна была моим преподавателем математики в университете. 
-                Хочется отметить её умение легко и доступно преподносить учебный материал. Если возникают какие-либо трудности, к ней всегда можно обратиться за помощью. Ирина Александровна может найти подход к любому студенту вне зависимости от уровня его подготовки. Побольше бы таких классных преподавателей!
-              </p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="{% static 'mdb/img/design/versova.png' %}" alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Наталья Вересова</h4>
-              <!--Text-->
-              <p class="card-text"> У меня были проблемы с математикой, поэтому был необходим репетитор. Мне посоветовали Ирину Александровну, придя к ней, я поняла, что если бы этот человек преподавал у меня в школе, то никаких недопониманий бы с математикой не было! Она умеет ясно и понятно объяснить ученику всё то, что он не понимает доступным языком и главное с юмором! Ирина Александровна очень легка и приятна в общении! Я пришла к ней с нулевыми знаниями, а ушла с багажом! У меня даже появился интерес к математике после наших занятий! Когда я поступила в университет, оказалось, что Ирина Александровна будет моим преподавателем по высшей математике, проблем не было, я и мои одногруппники выполняли все требования и задания, которые давала Ирина Миткевич, прошло время и мы (я и одногруппники) сдали экзамен по математике на 4 и 5. Очень благодарна Ирине Александровне за полученные знания,она супер-преподаватель!
-              </p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-        </div>
-        <!-- Card deck -->
-        </div>
-        <!--/Second slide-->
-        <!--Third slide-->
-        <div class="carousel-item">
-            <!-- Card deck -->
-<div class="card-deck" style="margin: 0;">
-
-  <!-- Card -->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top" src="{% static 'mdb/img/design/chuglova.png' %}" alt="Card image cap">
-      
-        <div class="mask rgba-white-slight"></div>
-      
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Чуглова Елена Александровна: мама выпускника 2009 годаs</h4>
-      <!--Text-->
-      <p class="card-text">Хотелось бы поделиться своим впечатлением о таком замечательном учителе и человеке, как Джумаева Ольга Евгеньевна. Двое моих детей занимались у неё на протяжении долго времени. Общение с ней было высокопрофессиональным, в свою работу она вкладывает не только свои знания, но и душу. Кроме навыков в работе по предметам, она дала интерес детям к изучению точных наук и стремлению к познанию. Спасибо ей огромное огромное, как учителю и человеку. </p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-    </div>
-
-  </div>
-  <!-- Card -->
-
-  <!-- Card -->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top" src="{% static 'mdb/img/design/krylova.jpg' %}" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Юлия Крылова, выпускница 1 школы Вологды 2016 года, ныне студентка Экономического факультета ВШЭ</h4>
-      <!--Text-->
-      <p class="card-text">Занималась с Анастасией Леонидовной ещё перед ЕГЭ. Занятия проходили спокойно, в умеренном темпе. Материал излагался максимально понятно. На тот момент была достаточно слабая подготовка, но, после совместных занятий я набрала достаточное количество баллов( профильный уровень), которые помогли мне поступить в университет. Помимо знаний и опыта преподавателя, хотелось бы отметить и такие качества, как самоотдача, открытость, доброта, готовность пожертвовать своим личным временем (иногда занимались и поздно вечером или в перерывах между какими-либо мероприятиями). Одним словом, хороший преподаватель.
-      </p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-    </div>
-
-  </div>
-  <!-- Card -->
-
-  <!-- Card -->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top" src="{% static 'mdb/img/design/kiseleva.jpg' %}" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Киселева Ксения, выпуск 2014 года</h4>
-      <!--Text-->
-      <p class="card-text">Марина Анатольевна - преподаватель по призванию. 
-          Внимательная, умная, чуткая и терпеливая, всегда с обожанием и уважением к своему предмету и своим студентам, а это и есть самое сложное и необходимое в профессии учителя. 
-          
-          Посещать занятия Марины Анатольевны было приятно и в удовольствие. Она умеет поддержать, помочь, объяснять до потери пульса (своего, конечно:) ), и при этом заразить любовью к геометрии и стремлением развиваться. 
-          Геометрия - тот предмет, по которому я всегда делала домашку в первую очередь :)
-      </p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-
-    </div>
-
-  </div>
-  <!-- Card -->
-
-</div>
-<!-- Card deck -->
-</div>
-        <!--/Third slide-->
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper--> 
+    
 
 </section>
 <!--Section: reports-->
     </div>
   </main1 >
   <!--Main layout-->
-
+ {% endblock %}
   
 
   <!--Footer-->
@@ -946,13 +639,21 @@
   </script>
     <script>
     $(document).ready(function (){
-        var biggestHeight = 0;
+      var biggestHeight = 0;
 
       $('.advantage').each(function (index, element) {
           biggestHeight = $(this).outerHeight() >= biggestHeight ? $(this).outerHeight() : biggestHeight;
       });
 
       $('.advantage').css('height', biggestHeight + 'px');
+
+      biggestHeight = 0;
+
+      $('.card-text').each(function (index, element) {
+          biggestHeight = $(this).outerHeight() >= biggestHeight ? $(this).outerHeight() : biggestHeight;
+      });
+
+      $('.card-text').css('height', biggestHeight + 'px');
 
       $('.start').click(function() {
         $('.alert').addClass('show');

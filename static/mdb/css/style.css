@@ -67,3 +67,10 @@ body,
 .page-footer {
   background-color: #1C2331; }
 
+/* my */
+
+
+.card-body {
+  height: 100%;
+  display: table;
+}
