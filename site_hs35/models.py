@@ -29,7 +29,7 @@ class Ankete(models.Model):
     status = models.CharField('Статус', max_length=6, choices=STATUS_CHOICES, default=STATUS.PUPIL)
     name = models.CharField('Имя', max_length=256)
     wishes = models.CharField('Пожелания', max_length=1000)
-    discipline = models.CharField('Дисциплина', max_length=10, choices=DISCIPLINE_CHOICES, default=DISCIPLINE.PUPIL)
+    discipline = models.CharField('Дисциплина', max_length=10, choices=DISCIPLINE_CHOICES, default=DISCIPLINE.MATH)
 
     def __str__(self):
         if self.name:
