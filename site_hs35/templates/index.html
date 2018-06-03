@@ -1,86 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Человек разумный</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="{% static "/mdb/css/bootstrap.min.css" %}" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="{% static "/mdb/css/mdb.min.css" %}" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="{% static "/mdb/css/style.css" %}" rel="stylesheet">
-</head>
-
-<body>
-  {% block navbar %}
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-    <div class="container">
-
-      <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-       <strong>Человек разумный</strong>
-      </a>
-
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">О нас
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pupils">Для учеников</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#parents">Для родителей</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#teachers">Для учителей</a>
-          </li>
-        </ul>
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-          <!-- <li class="nav-item">
-            <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a href="dashboard/" class="nav-link border border-light rounded"
-              target="_blank">
-              <i class="fa fa-user mr-2"></i>Войти
-            </a>
-          </li> -->
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  <!-- Navbar -->
-  {% enblock %}
   {% block content %}
   <div style="position:absolute; width:50%; left:50%; margin-left:-25%; top:25%; margin-top:-25px; z-index: 1000;" class="alert alert-info alert-dismissible fade" role="alert">
       <i class="fa fa-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Подать заявку будет можно с 1 июня 2018 года
@@ -548,118 +468,54 @@
       <!--Section: Not enough-->
 
       <hr class="mb-5">
-<!--Section: reports-->
+<!--Section: form-->
 <section>
   
+<!-- Material form contact -->
+<form method="POST" action=".">
+  <p class="h4 text-center mb-4">Расскажите о себе</p>
+
+  <!-- Material input text -->
+  <div class="md-form">
+      <i class="fa fa-user prefix grey-text"></i>
+      <input type="text" id="materialFormContactNameEx" class="form-control">
+      <label for="materialFormContactNameEx">Ваше имя</label>
+  </div>
+
+  <!-- Material input email -->
+  <div class="md-form">
+      <i class="fa fa-envelope prefix grey-text"></i>
+      <input type="email" id="materialFormContactEmailEx" class="form-control">
+      <label for="materialFormContactEmailEx">Your email</label>
+  </div>
+  
+  <!-- Material input subject -->
+  <div class="md-form">
+      <i class="fa fa-tag prefix grey-text"></i>
+      <input type="text" id="materialFormContactSubjectEx" class="form-control">
+      <label for="materialFormContactSubjectEx">Subject</label>
+  </div>
+  
+  <!-- Material textarea message -->
+  <div class="md-form">
+      <i class="fa fa-pencil prefix grey-text"></i>
+      <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3"></textarea>
+      <label for="materialFormContactMessageEx">Your message</label>
+  </div>
+
+  <div class="text-center mt-4">
+      <button class="btn btn-outline-secondary" type="submit">Отправить<i class="fa fa-paper-plane-o ml-2"></i></button>
+  </div>
+</form>
+<!-- Material form contact -->
+                    
     
 
 </section>
-<!--Section: reports-->
+<!--Section: form-->
     </div>
   </main1 >
   <!--Main layout-->
  {% endblock %}
   
 
-  <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-    <!--Call to action-->
-    <!-- <div class="pt-4">
-      <a class="btn btn-outline-white" href="#" target="_blank" role="button">Зарегистрироваться
-        <i class="fa fa-user-plus ml-2"></i>
-      </a>
-      <a class="btn btn-outline-white" href="#" target="_blank" role="button">Получить пробный урок
-        <i class="fa fa-graduation-cap ml-2"></i>
-      </a>
-    </div> -->
-    <!--/.Call to action-->
-
-    <hr class="my-4">
-
-    <!-- Social icons -->
-    <!--div class="pb-4">
-      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-        <i class="fa fa-facebook mr-3"></i>
-      </a>
-
-      <a href="https://twitter.com/MDBootstrap" target="_blank">
-        <i class="fa fa-twitter mr-3"></i>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-        <i class="fa fa-youtube mr-3"></i>
-      </a>
-
-      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
-        <i class="fa fa-google-plus mr-3"></i>
-      </a>
-
-      <a href="https://dribbble.com/mdbootstrap" target="_blank">
-        <i class="fa fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="https://pinterest.com/mdbootstrap" target="_blank">
-        <i class="fa fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
-        <i class="fa fa-github mr-3"></i>
-      </a>
-
-      <a href="http://codepen.io/mdbootstrap/" target="_blank">
-        <i class="fa fa-codepen mr-3"></i>
-      </a>
-    </div-->
-    <!-- Social icons -->
-
-    <!--Copyright-->
-    <div class="footer-copyright py-3">
-      © 2018:
-      <a href="" target="_blank"> Человек разумный </a>
-    </div>
-    <!--/.Copyright-->
-
-  </footer>
-  <!--/.Footer-->
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="{% static "/mdb/js/jquery-3.2.1.min.js" %}"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{% static "/mdb/js/popper.min.js" %}"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{% static "/mdb/js/bootstrap.min.js" %}"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{% static "/mdb/js/mdb.min.js" %}"></script>
-      <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-  </script>
-    <script>
-    $(document).ready(function (){
-      var biggestHeight = 0;
-
-      $('.advantage').each(function (index, element) {
-          biggestHeight = $(this).outerHeight() >= biggestHeight ? $(this).outerHeight() : biggestHeight;
-      });
-
-      $('.advantage').css('height', biggestHeight + 'px');
-
-      biggestHeight = 0;
-
-      $('.card-text').each(function (index, element) {
-          biggestHeight = $(this).outerHeight() >= biggestHeight ? $(this).outerHeight() : biggestHeight;
-      });
-
-      $('.card-text').css('height', biggestHeight + 'px');
-
-      $('.start').click(function() {
-        $('.alert').addClass('show');
-      });
-    });
-    </script>
-</body>
-
-</html>
