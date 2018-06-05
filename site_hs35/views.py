@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from .forms import AnketeForm
 
 # Create your views here.
 
 
 def home_page(request):
-    return render(request, 'index.html')
+    form = AnketeForm()
+    return render(request, 'index.html', {'form': form})
 
 def for_pupils(request):
     return render(request, 'pupils.html')

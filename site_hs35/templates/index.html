@@ -118,7 +118,7 @@
                   available. Create your own, stunning website.</strong>
               </p> -->
 
-              <a href="#" class="btn btn-outline-white btn-lg start">Начни сейчас
+              <a href="#" class="btn btn-outline-white btn-lg start" data-toggle="modal" data-target="#modalContactForm">Начни сейчас
                 <i class="fa fa-graduation-cap ml-2"></i>
               </a>
             </div>
@@ -471,44 +471,68 @@
 <!--Section: form-->
 <section>
   
+
+  <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!--Modal: Contact form-->
+    <div class="modal-dialog cascading-modal" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header primary-color white-text">
+                <h4 class="title">
+                    <i class="fa fa-pencil"></i> Contact form</h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+
+                <!-- Material input name -->
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
+                    <label for="materialFormNameModalEx1">Your name</label>
+                </div>
+
+                <!-- Material input email -->
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
+                    <label for="materialFormEmailModalEx1">Your email</label>
+                </div>
+
+                <!-- Material input subject -->
+                <div class="md-form form-sm">
+                    <i class="fa fa-tag prefix"></i>
+                    <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
+                    <label for="materialFormSubjectModalEx1">Subject</label>
+                </div>
+
+                <!-- Material textarea message -->
+                <div class="md-form form-sm">
+                    <i class="fa fa-pencil prefix"></i>
+                    <textarea type="text" id="materialFormMessageModalEx1" class="md-textarea form-control"></textarea>
+                    <label for="materialFormMessageModalEx1">Your message</label>
+                </div>
+
+                <div class="text-center mt-4 mb-2">
+                    <button class="btn btn-primary">Send
+                        <i class="fa fa-send ml-2"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+    <!--/Modal: Contact form-->
+</div>
+                      
 <!-- Material form contact -->
-<form method="POST" action=".">
-  <p class="h4 text-center mb-4">Расскажите о себе</p>
-
-  <!-- Material input text -->
-  <div class="md-form">
-      <i class="fa fa-user prefix grey-text"></i>
-      <input type="text" id="materialFormContactNameEx" class="form-control">
-      <label for="materialFormContactNameEx">Ваше имя</label>
-  </div>
-
-  <!-- Material input email -->
-  <div class="md-form">
-      <i class="fa fa-envelope prefix grey-text"></i>
-      <input type="email" id="materialFormContactEmailEx" class="form-control">
-      <label for="materialFormContactEmailEx">Your email</label>
-  </div>
-  
-  <!-- Material input subject -->
-  <div class="md-form">
-      <i class="fa fa-tag prefix grey-text"></i>
-      <input type="text" id="materialFormContactSubjectEx" class="form-control">
-      <label for="materialFormContactSubjectEx">Subject</label>
-  </div>
-  
-  <!-- Material textarea message -->
-  <div class="md-form">
-      <i class="fa fa-pencil prefix grey-text"></i>
-      <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3"></textarea>
-      <label for="materialFormContactMessageEx">Your message</label>
-  </div>
-
-  <div class="text-center mt-4">
-      <button class="btn btn-outline-secondary" type="submit">Отправить<i class="fa fa-paper-plane-o ml-2"></i></button>
-  </div>
-</form>
-<!-- Material form contact -->
-                    
+ {{ form }}                   
     
 
 </section>
