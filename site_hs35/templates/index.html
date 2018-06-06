@@ -532,9 +532,71 @@
 </div>
                       
 <!-- Material form contact -->
- {{ form }}                   
+{{ form.non_field_errors }}
+<div class="md-form">
+    {{ form.status.errors }}
+    <i class="fa fa-tag prefix grey-text"></i>
+    {{ form.status }}
+    <label for="id_status">Email subject:</label>
+</div>
+<div class="md-form">
+    {{ form.name.errors }}
+    <i class="fa fa-user prefix grey-text"></i>
+    {{ form.name }}
+    <label for="id_name">Your name:</label>
+</div>
+<div class="md-form">
+    {{ form.wishes.errors }}
+    <i class="fa fa-pencil prefix grey-text"></i>
+    {{ form.wishes }}
+    <label for="id_wishes">Your email address:</label>
+</div>
+<div class="md-form">
+    {{ form.discipline.errors }}
+    <i class="fa fa-pencil prefix grey-text"></i>
+    {{ form.discipline }}
+    <label for="id_discipline">CC yourself?</label>
+</div>           
     
 
+<!-- Material form contact -->
+<form>
+  <p class="h4 text-center mb-4">Wite to us</p>
+
+  <!-- Material input text -->
+  <div class="md-form">
+      <i class="fa fa-user prefix grey-text"></i>
+      <input type="text" id="materialFormContactNameEx" class="form-control">
+      <label for="materialFormContactNameEx">Your name</label>
+  </div>
+
+  <!-- Material input email -->
+  <div class="md-form">
+      <i class="fa fa-envelope prefix grey-text"></i>
+      <input type="email" id="materialFormContactEmailEx" class="form-control">
+      <label for="materialFormContactEmailEx">Your email</label>
+  </div>
+  
+  <!-- Material input subject -->
+  <div class="md-form">
+      <i class="fa fa-tag prefix grey-text"></i>
+      <input type="text" id="materialFormContactSubjectEx" class="form-control">
+      <label for="materialFormContactSubjectEx">Subject</label>
+  </div>
+  
+  <!-- Material textarea message -->
+  <div class="md-form">
+      <i class="fa fa-pencil prefix grey-text"></i>
+      <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3"></textarea>
+      <label for="materialFormContactMessageEx">Your message</label>
+  </div>
+
+  <div class="text-center mt-4">
+      <button class="btn btn-outline-secondary" type="submit">Send<i class="fa fa-paper-plane-o ml-2"></i></button>
+  </div>
+</form>
+<!-- Material form contact -->
+                    
 </section>
 <!--Section: form-->
     </div>
